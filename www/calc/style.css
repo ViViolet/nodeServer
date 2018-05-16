@@ -1,0 +1,41 @@
+
+input[type=button]{
+    width: 50px;
+    height: 50px;
+    background-color: palevioletred;
+    font-size: 25px;
+}
+
+.teclas{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+     /* justify-content:space-between sirve para el caso en el que el width no coincidiese perfectamente con el tamaño del global de teclas; si no entiendes este comentario cambio el width a 280 p.ej. */
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+#pantalla{
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#pie{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
