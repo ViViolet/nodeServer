@@ -29,6 +29,7 @@ app.post('/', function (req, res) {
 
     text = text.replace("[sustituir]", fila);
     res.send(text);
+
   });
   // res.send();
 });
@@ -42,11 +43,25 @@ app.post('/', function (req, res) {
 app.get('/', function (req, res) {
   console.log("petición recibida en tareas");
   fs.readFile("./www/formulario/index2.html", "utf8", function (err, text) {
-    text = text.replace("[sustituir]", " ");
+    // text = text.replace("[sustituir]", " ");
+    var fila = cargarTareas(listatareas);
+    text = text.replace("[sustituir]", fila);
     res.send(text);
   });
   // res.send();
 });
+
+
+app.get('/eliminar/:id?', function (req, res) {
+  console.log('Eliminando registro ' + req.query.id);
+  listatareas.splice(req.query.id, 1)
+  // Eliminar registro de la colección;
+  fs.readFile("./www/formulario/index2.html", "utf8", function (err, text) {
+    var fila = cargarTareas(listatareas);
+    text = text.replace("[sustituir]", fila);
+    res.send(text);
+  });
+})
 
 
 var server = app.listen(80, function () {
@@ -61,8 +76,10 @@ function cargarTareas(tareas) {
           <td>[id]</td>
           <td>[nombre]</td>
           <td>[tarea]</td>
+          <td><a href="/eliminar?id=[id]">Eliminar</a></td>
       </tr>
       `;
+    fila = fila.replace("[id]", indice);
     fila = fila.replace("[id]", indice);
     fila = fila.replace("[nombre]", tareas[indice].nombre);
     fila = fila.replace("[tarea]", tareas[indice].tarea);
