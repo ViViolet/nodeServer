@@ -37,6 +37,7 @@ window.onload = function () {
 
     }
 
+    
 
     // this.document.getElementById("formulario").onsubmit=function(){
     //     alert("formulario");
