@@ -1,11 +1,21 @@
+body{
+    margin: 40px auto;
+    width: 50%;
+}
 
  h1{
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     padding: 40px;
+     padding: 20px;
+     text-align: center;
  }
 
-form{
-    padding-left: 40px;
-    
-    
+hr{
+    height: 10px;
+    margin-bottom:20px;
+    margin-top: 20px;
+}
+
+table{
+    text-align: center;
+
 }

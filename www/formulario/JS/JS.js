@@ -26,7 +26,10 @@ window.onload = function () {
         }
     }
 
-    // cargarTareas(tareas);
+    function borrarcontenido(input){
+        document.getElementsByName("id","nombre","tarea").reset();
+    }
+    
 
     this.document.getElementById("enviar").onclick = function (event) {
         // event.preventDefault();
