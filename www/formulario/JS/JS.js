@@ -40,8 +40,7 @@ window.onload = function () {
 
     }
 
-    
-
+    prueba 
     // this.document.getElementById("formulario").onsubmit=function(){
     //     alert("formulario");
     // } 
